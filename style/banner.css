@@ -1,0 +1,37 @@
+#banner{
+    height: 90vh;
+    background-color: rgb(97, 31, 13);
+}
+ #text-banner{
+    font-size:4rem;
+    }
+#btn-explore{
+    transition: all.3s ease-in-out;
+}
+#btn-explore:hover{
+    background-color: rgb(101, 101, 238);
+    transform: translate(0px,5px);
+    color: white;
+    box-shadow: 3px 3px 3px rgb(117, 113, 113);
+    transition: all.3s ease-in-out;
+}
+
+
+@media screen and (min-width:577px) and (max-width:992px) {
+    #banner{
+        height: 50vh;
+    }
+     #text-banner{
+    font-size:35px ;
+    }
+}
+
+@media screen and (max-width:576px) {
+    #banner-item{
+        height: 50% !important;
+    }
+     #text-banner{
+    font-size:2rem;
+    }
+   
+}

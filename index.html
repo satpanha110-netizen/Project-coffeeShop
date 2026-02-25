@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffeShop</title>
+    <!-- link css bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <!-- script js bootstrap -->
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- link cdn icon  bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- link header css -->
+    <link rel="stylesheet" href="../style/header.css">
+    <!-- link banner css -->
+     <link rel="stylesheet" href="../style/banner.css">
+</head>
+<body>
+    <!-- header -->
+     <header class="container-fluid  position-sticky top-0 z-3​ py-2">
+        <nav class="container navbar h-100 ">
+            <!-- logo -->
+             <a href="" class="navbar-brand fs-2 text-light fw-bold">CoffeeShop</a>
+             <!-- menu -->
+              <ul class="nav  d-none d-lg-flex">
+                <li>
+                    <a href="#banner" class="nav-link fs-5 text-light  mx-2 text-uppercase">Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link fs-5 text-light  mx-2 text-uppercase">About</a>
+                </li>
+                <li>
+                    <a href="#service" class="nav-link fs-5 text-light  mx-2 text-uppercase">Sercive</a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link fs-5 text-light  mx-2 text-uppercase">contact</a>
+                </li>
+              </ul>
+              <!-- search& icon -->
+
+               <div class=" d-none d-lg-flex align-items-center gap-3">
+                <!-- input search -->
+                 <input type="text" id="InputSearch" class="form-control shadow-none rounded-pill" 
+                 placeholder="Search coffee">
+                <!-- icon -->
+                 <i class="bi bi-cart text-light p-2 fs-5 rounded-2 py-2"></i>
+               </div>
+               <!-- icon sidbar -->
+                  <i class="d-lg-none bi bi-list text-black  fs-2" data-bs-target="#sidbar" data-bs-toggle="offcanvas"></i>
+              
+
+        </nav>
+        <!-- sibar -->
+         <div class="offcanvas w-75 d-lg-none offcanvas-start py-2" data-bs-scroll="true" tabindex="-1" id="sidbar" aria-labelledby="offcanvasWithBothOptionsLabel">
+        
+        <div class="offcanvas-header border-bottom ">
+            <h3 class="text-light">CoffeeShop</h3>
+            <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body p-0">
+             <ul class="nav flex-column">
+                <li class="nav-item py-3"><a href="#banner " class="nav-link text-light fs-4">
+                    </i>Home</a>
+                </li>
+                <li class="nav-item py-3">
+                    <a href="#about " class="nav-link text-light fs-4">About Us</a>
+                </li>
+                <li class="nav-item py-3">
+                    <a href="#service" class="nav-link text-light fs-4">Service</a>
+                </li>
+                <li class="nav-item py-3">
+                    <a href="#contact" class="nav-link text-light fs-4">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+     </header>
+    <!-- main -->
+    <main>
+      <!-- banner -->
+       <div id="banner" class="container-fluid ">
+        <div class="container  row mx-auto h-100">
+         <!-- banner list -->
+           <div id="banner-item" class="col-12 col-md-6 d-flex flex-column justify-content-center pe-5 px-0 h-100 ">
+            <h1 id="text-baner" class="text-light">Lorem ipsum dolor sit.</h1>
+            <p class="pe-0 pe-md-2 pe-lg-5" style="color: aliceblue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum debitis unde facere veniam, ex vitae qui maiores!</p>
+            <button id="btn-explore" class="btn btn-warning  px-2  py-2 col-8 col-lg-4 ">Explore Collection</button>
+           </div>
+        <!-- banner-right -->
+            <div id="banner-item" class="col-12 col-md-6 h-100 pb-5 py-md-5 px-0 ">
+                <img src="../assets/image/logobanner.jpg" class="h-100 w-100  object-fit-cover " alt="logo-banner">
+            </div>
+        </div>
+       
+       </div>
+       <!-- select -->
+        <div class="container-fluid p-0 " style="background-color: rgb(96, 4, 4)">
+            <div class="container row d-flex mx-auto align-items-center py-4">
+            <!-- title select -->
+             <div class="col-12 col-md-6">
+                <h3 class="text-secondary"> Our Selection</h3>
+                <p class="text-secondary fw-semibold m-0">20 product</p>
+             </div>
+             <!-- button select -->
+              <div class=" col-12 col-md-6 d-flex justify-content-end gap-3">
+                 <ul class="nav nav-tabs" id="myTab" role="tablist">
+                     <li  role="presentation">
+                       <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="All-tab-pane" aria-selected="true">All</button>
+                     </li>
+                     <li  role="presentation">
+                       <button class="nav-link" id="coffee-tab" data-bs-toggle="tab" data-bs-target="#coffee" type="button" role="tab" aria-controls="Coffee-tab-pane" aria-selected="false">Coffe</button>
+                     </li>
+                     <li  role="presentation">
+                       <button class="nav-link" id="milktea-tab" data-bs-toggle="tab" data-bs-target="#milktea" type="button" role="tab" aria-controls="milktea-tab-pane" aria-selected="false">Milk tea</button>
+                     </li>
+                      
+                 </ul>
+              </div>
+              <!-- main content -tab -->
+               <div id="service" class="container py-5   ">
+                  <!-- tab -->
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active  py-2 p-0" id="all" role="tabpanel" aria-labelledby="All-tab" tabindex="0">
+                        <h2 class="text-light text-decoration-underline"> All Product</h2>
+                        <!-- Main card  -->
+                         <div id="" class=" container d-flex flex-wrap bg-primary p-0  m-0">
+                            <div class="col-12 col-md-5 col-lg-3 bg-white border border-black " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/0a/34/4c/0a344cfabbe54777fb3b1ff22405507c.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body  " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-12 col-md-5 col-lg-3 bg-white p-0 mx-0 border border-black " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/6d/84/8b/6d848b9642f50ce5d52abec6f2e05ba1.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-5 col-lg-3 bg-white p-0 mx-0 border border-black  " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/f5/2a/c2/f52ac25da595649f4dcd75dc052ded88.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3 bg-white p-0 mx-0 border border-black " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/6d/84/8b/6d848b9642f50ce5d52abec6f2e05ba1.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between  p-2">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-12 col-md-5 col-lg-3 bg-white p-0 mx-0 border border-black  " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/f5/2a/c2/f52ac25da595649f4dcd75dc052ded88.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-12 col-md-5 col-lg-3 bg-white p-0 mx-0 border border-black  " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/f5/2a/c2/f52ac25da595649f4dcd75dc052ded88.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-12 col-md-5 col-lg-3 bg-white p-0 mx-0 border border-black  " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/f5/2a/c2/f52ac25da595649f4dcd75dc052ded88.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-12 col-md-5 col-lg-3 bg-white p-0 mx-0 border border-black  " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/f5/2a/c2/f52ac25da595649f4dcd75dc052ded88.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             
+                        </div>  
+                </div>
+                <div  class="tab-pane fade   " id="coffee" role="tabpanel" aria-labelledby="coffee-tab" tabindex="0">
+                      <h2 class="text-light text-decoration-underline"> Coffee  Product</h2>
+                        <!-- Main card  -->
+                         <div class=" container d-flex flex-wrap bg-primary p-0  m-0">
+                            <div class="col-12 col-md-5 col-lg-3 bg-white border border-black " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/0a/34/4c/0a344cfabbe54777fb3b1ff22405507c.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body  " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-12 col-md-5 col-lg-3 bg-white p-0 mx-0 border border-black " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/d7/65/9c/d7659cce0e2595551e771e7b2edab17e.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-5 col-lg-3 bg-white p-0 mx-0 border border-black  " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/f5/2a/c2/f52ac25da595649f4dcd75dc052ded88.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3 bg-white p-0 mx-0 border border-black " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/1200x/81/92/7e/81927ee1cf8fcd7715530b0856cf553d.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between  p-2">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             
+                         </div>
+
+                        </div>
+                    
+                   
+                    <div class="tab-pane fade" id="milktea" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                        <h2 class="text-light text-decoration-underline"> Milk tea Product</h2>
+                        <!-- Main card  -->
+                         <div class=" container d-flex flex-wrap bg-primary p-0  m-0">
+                            <div class="col-12 col-md-5 col-lg-3 bg-white border border-black " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/e2/95/dc/e295dcf44dd5783af12267e41b68e79c.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body  " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-12 col-md-5 col-lg-3 bg-white p-0 mx-0 border border-black " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/6d/84/8b/6d848b9642f50ce5d52abec6f2e05ba1.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-5 col-lg-3 bg-white p-0 mx-0 border border-black  " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/b6/19/86/b61986dbae2d5be701833378ab653f98.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between p-2 ">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3 bg-white p-0 mx-0 border border-black " style="height: 480px;">
+                                <div class="card-header  " style="height: 60%;">
+                                    <img src="https://i.pinimg.com/736x/6d/84/8b/6d848b9642f50ce5d52abec6f2e05ba1.jpg" class="w-100 h-100 object-fit-cover img-thumbnail" alt="">
+                                </div>
+                                <div class="card-body " style="height: 40%;">
+                                    <h4>Cappuccino</h4>
+                                    <p class="m-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti harum </p>
+                                    <p class="m-0 py-2 p-2">7$</p>
+                                    <div class="d-flex justify-content-between  p-2">
+                                        <button class="btn px-3 btn-primary">Add to Cart</button>
+                                         <button class="btn px-3 btn-secondary"> Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             
+                    </div>
+                    
+               
+                </div>
+                
+                </div>
+               </div>
+            </div>
+        </div>
+       <div id="about" class=" container-fluid vh-100 py-5  border-top p-0 " style="background-color: rgb(96, 33, 33);">
+                    <div class="col-12 max-auto d-flex   flex-column align-items-center justify-content-center">
+                        <h3 class=" text-light text-center  mb-4 ">Lorem ipsum dolor sit.</h3>
+                        <p class="text-light text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat similique fugit nostrum, magni quisquam incidunt voluptatem laborum unde harum reiciendis modi, libero amet laudantium! Nemo voluptatum possimus nulla. Quisquam, soluta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia sapiente repellat tempore, necessitatibus minus odit praesentium officia dolores quidem sit molestias beatae eos fugit non, obcaecati cum, tempora ipsam? Saepe?</p>
+                    </div>
+                    <div class="container pt-1 gap-1  d-flex">
+                        <div class="col-4 " style="height: 530px;">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                                <div class="card-body"> 
+                                    <img src="../assets/image/nike.jpg" class="w-100 object-fit-cover" alt="">
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-4 " style="height: 530px;">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                                <div class="card-body"> 
+                                    <img src="../assets/image/nike.jpg" class="w-100 object-fit-cover" alt="">
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-4 " style="height: 530px;">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                                <div class="card-body"> 
+                                    <img src="../assets/image/nike.jpg" class="w-100 object-fit-cover" alt="">
+                                </div>
+                            </div>
+                        </div>
+                         
+                       
+                    </div>
+        </div>
+
+              <div  id="contact" class="container-fluid   p-0" style="background-color: rgb(80, 2, 2);">
+                <!-- map and contact -->
+                 <div class=" container row m-auto   py-5 p-0">
+                    <!-- map -->
+                        <div class=" col-12 col-md-6 bg-light py-1 rounded-3 p-0" style="background-color: rgb(80, 2, 2);">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.742097891026!2d104.88553447444836!3d11.570337088630891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109519fe4077d69%3A0x20138e822e434660!2z4Z6f4Z624Z6A4Z6b4Z6c4Z634Z6R4Z-S4Z6Z4Z624Z6b4Z-Q4Z6Z4Z6X4Z684Z6Y4Z634Z6T4Z-S4Z6R4Z6X4Z-S4Z6T4Z-G4Z6W4Z-B4Z6J!5e0!3m2!1skm!2skh!4v1771923240178!5m2!1skm!2skh" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <!-- contact -->
+                         <div class=" col-12  col-md-6 p-5 bg-light rounded-3 border border-2 border-black " >
+                            <form >
+                                <div class=" mb-4">
+                                    <input type="text" placeholder="Your Email" class=" form-control fs-5 py-3 shadow-none ">
+                                </div>
+                                <div class=" mb-4">
+                                    <input type="text" placeholder="Your Email" class=" form-control fs-5 py-3 shadow-none ">
+                                </div>
+                                <div class=" mb-4">
+                                   <textarea class="form-control shadow-none " rows="5" placeholder="Your Message"></textarea>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary btn-lg w-50"> Submit Form</button>
+                                </div>
+                            </form>
+                         </div>
+                 </div>
+              </div>
+    </main>
+
+    <!-- fooder -->
+    <footer></footer>
+
+   
+     
+       
+    
+</body>
+</html>
